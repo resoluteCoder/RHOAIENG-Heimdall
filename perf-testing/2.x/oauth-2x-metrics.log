@@ -1,0 +1,171 @@
+Resource Metrics - RHOAI 2.x Route Components
+Generated: Thu Oct 23 07:26:08 AM CDT 2025
+Configuration: Collecting metrics every 5 seconds during benchmark
+
+Metrics Collected:
+- oauth-proxy CPU usage
+- oauth-proxy Memory usage
+- echo-server CPU/Memory usage
+
+================================================================================
+
+=== ITERATION 1 - START - Thu Oct 23 07:26:11 AM CDT 2025 ===
+## oauth-proxy CPU (rate over 5m):
+echo-server-9f44df48b-dtxm8 0.0003673036495898996
+## oauth-proxy Memory (bytes):
+echo-server-9f44df48b-dtxm8 24317952
+## echo-server CPU (rate over 5m):
+echo-server-9f44df48b-dtxm8 null 0.000698253000196734
+echo-server-9f44df48b-dtxm8 echo-server 0.000325696150524471
+echo-server-9f44df48b-dtxm8 oauth-proxy 0.00036684537557331645
+echo-server-9f44df48b-dtxm8 POD 0
+## echo-server Memory (bytes):
+echo-server-9f44df48b-dtxm8 null 62754816
+echo-server-9f44df48b-dtxm8 echo-server 36761600
+echo-server-9f44df48b-dtxm8 oauth-proxy 24317952
+echo-server-9f44df48b-dtxm8 POD 0
+
+=== ITERATION 1 - END - Thu Oct 23 07:26:23 AM CDT 2025 ===
+## oauth-proxy CPU (rate over 5m):
+echo-server-9f44df48b-dtxm8 0.00980627742358734
+## oauth-proxy Memory (bytes):
+echo-server-9f44df48b-dtxm8 24317952
+## echo-server CPU (rate over 5m):
+echo-server-9f44df48b-dtxm8 null 0.0025291590859334305
+echo-server-9f44df48b-dtxm8 echo-server 0.0006962908912210682
+echo-server-9f44df48b-dtxm8 oauth-proxy 0.009817363482479422
+echo-server-9f44df48b-dtxm8 POD 0
+## echo-server Memory (bytes):
+echo-server-9f44df48b-dtxm8 null 62754816
+echo-server-9f44df48b-dtxm8 echo-server 36761600
+echo-server-9f44df48b-dtxm8 oauth-proxy 24317952
+echo-server-9f44df48b-dtxm8 POD 0
+
+=== ITERATION 2 - START - Thu Oct 23 07:26:34 AM CDT 2025 ===
+## oauth-proxy CPU (rate over 5m):
+echo-server-9f44df48b-dtxm8 0.01018197543170239
+## oauth-proxy Memory (bytes):
+echo-server-9f44df48b-dtxm8 24317952
+## echo-server CPU (rate over 5m):
+echo-server-9f44df48b-dtxm8 null 0.0026946397596645656
+echo-server-9f44df48b-dtxm8 echo-server 0.0006962908912210683
+echo-server-9f44df48b-dtxm8 oauth-proxy 0.0003816598898784712
+echo-server-9f44df48b-dtxm8 POD 0
+## echo-server Memory (bytes):
+echo-server-9f44df48b-dtxm8 null 62754816
+echo-server-9f44df48b-dtxm8 echo-server 36761600
+echo-server-9f44df48b-dtxm8 oauth-proxy 24317952
+echo-server-9f44df48b-dtxm8 POD 0
+
+=== ITERATION 2 - END - Thu Oct 23 07:26:46 AM CDT 2025 ===
+## oauth-proxy CPU (rate over 5m):
+echo-server-9f44df48b-dtxm8 0.020648771990540927
+## oauth-proxy Memory (bytes):
+echo-server-9f44df48b-dtxm8 32542720
+## echo-server CPU (rate over 5m):
+echo-server-9f44df48b-dtxm8 null 0.04592913849715817
+echo-server-9f44df48b-dtxm8 echo-server 0.030851559903058972
+echo-server-9f44df48b-dtxm8 oauth-proxy 0.02067189295300548
+echo-server-9f44df48b-dtxm8 POD 0
+## echo-server Memory (bytes):
+echo-server-9f44df48b-dtxm8 null 71200768
+echo-server-9f44df48b-dtxm8 echo-server 38248448
+echo-server-9f44df48b-dtxm8 oauth-proxy 32542720
+echo-server-9f44df48b-dtxm8 POD 0
+
+=== ITERATION 3 - START - Thu Oct 23 07:26:57 AM CDT 2025 ===
+## oauth-proxy CPU (rate over 5m):
+echo-server-9f44df48b-dtxm8 0.02144459696816085
+## oauth-proxy Memory (bytes):
+echo-server-9f44df48b-dtxm8 32542720
+## echo-server CPU (rate over 5m):
+echo-server-9f44df48b-dtxm8 null 0.047170060297603705
+echo-server-9f44df48b-dtxm8 echo-server 0.03147295090498631
+echo-server-9f44df48b-dtxm8 oauth-proxy 0.021468660164205462
+echo-server-9f44df48b-dtxm8 POD 0
+## echo-server Memory (bytes):
+echo-server-9f44df48b-dtxm8 null 71200768
+echo-server-9f44df48b-dtxm8 echo-server 38248448
+echo-server-9f44df48b-dtxm8 oauth-proxy 32542720
+echo-server-9f44df48b-dtxm8 POD 0
+
+=== ITERATION 3 - END - Thu Oct 23 07:27:08 AM CDT 2025 ===
+## oauth-proxy CPU (rate over 5m):
+echo-server-9f44df48b-dtxm8 0.022575539476625064
+## oauth-proxy Memory (bytes):
+echo-server-9f44df48b-dtxm8 32542720
+## echo-server CPU (rate over 5m):
+echo-server-9f44df48b-dtxm8 null 0.050161614215
+echo-server-9f44df48b-dtxm8 echo-server 0.03362351329334103
+echo-server-9f44df48b-dtxm8 oauth-proxy 0.022389515343510004
+echo-server-9f44df48b-dtxm8 POD 0
+## echo-server Memory (bytes):
+echo-server-9f44df48b-dtxm8 null 71200768
+echo-server-9f44df48b-dtxm8 echo-server 38248448
+echo-server-9f44df48b-dtxm8 oauth-proxy 32542720
+echo-server-9f44df48b-dtxm8 POD 0
+
+=== ITERATION 4 - START - Thu Oct 23 07:27:19 AM CDT 2025 ===
+## oauth-proxy CPU (rate over 5m):
+echo-server-9f44df48b-dtxm8 0.028416040029600038
+## oauth-proxy Memory (bytes):
+echo-server-9f44df48b-dtxm8 31830016
+## echo-server CPU (rate over 5m):
+echo-server-9f44df48b-dtxm8 null 0.08821823408832395
+echo-server-9f44df48b-dtxm8 echo-server 0.056761301977363815
+echo-server-9f44df48b-dtxm8 oauth-proxy 0.028449470218367846
+echo-server-9f44df48b-dtxm8 POD 0
+## echo-server Memory (bytes):
+echo-server-9f44df48b-dtxm8 null 71626752
+echo-server-9f44df48b-dtxm8 echo-server 38232064
+echo-server-9f44df48b-dtxm8 oauth-proxy 31830016
+echo-server-9f44df48b-dtxm8 POD 0
+
+=== ITERATION 4 - END - Thu Oct 23 07:27:31 AM CDT 2025 ===
+## oauth-proxy CPU (rate over 5m):
+echo-server-9f44df48b-dtxm8 0.027237955925925927
+## oauth-proxy Memory (bytes):
+echo-server-9f44df48b-dtxm8 31965184
+## echo-server CPU (rate over 5m):
+echo-server-9f44df48b-dtxm8 null 0.09737624846521897
+echo-server-9f44df48b-dtxm8 echo-server 0.059067347073589654
+echo-server-9f44df48b-dtxm8 oauth-proxy 0.040102759442669535
+echo-server-9f44df48b-dtxm8 POD 0
+## echo-server Memory (bytes):
+echo-server-9f44df48b-dtxm8 null 70905856
+echo-server-9f44df48b-dtxm8 echo-server 38232064
+echo-server-9f44df48b-dtxm8 oauth-proxy 31965184
+echo-server-9f44df48b-dtxm8 POD 0
+
+=== ITERATION 5 - START - Thu Oct 23 07:27:42 AM CDT 2025 ===
+## oauth-proxy CPU (rate over 5m):
+echo-server-9f44df48b-dtxm8 0.04935666321903706
+## oauth-proxy Memory (bytes):
+echo-server-9f44df48b-dtxm8 32468992
+## echo-server CPU (rate over 5m):
+echo-server-9f44df48b-dtxm8 null 0.12170320928412667
+echo-server-9f44df48b-dtxm8 echo-server 0.07387320439855949
+echo-server-9f44df48b-dtxm8 oauth-proxy 0.04941226844904742
+echo-server-9f44df48b-dtxm8 POD 0
+## echo-server Memory (bytes):
+echo-server-9f44df48b-dtxm8 null 70905856
+echo-server-9f44df48b-dtxm8 echo-server 38232064
+echo-server-9f44df48b-dtxm8 oauth-proxy 31965184
+echo-server-9f44df48b-dtxm8 POD 0
+
+=== ITERATION 5 - END - Thu Oct 23 07:27:54 AM CDT 2025 ===
+## oauth-proxy CPU (rate over 5m):
+echo-server-9f44df48b-dtxm8 0.05135289097640918
+## oauth-proxy Memory (bytes):
+echo-server-9f44df48b-dtxm8 32468992
+## echo-server CPU (rate over 5m):
+echo-server-9f44df48b-dtxm8 null 0.1266912763234607
+echo-server-9f44df48b-dtxm8 echo-server 0.07694085577973711
+echo-server-9f44df48b-dtxm8 oauth-proxy 0.051565952012866824
+echo-server-9f44df48b-dtxm8 POD 0
+## echo-server Memory (bytes):
+echo-server-9f44df48b-dtxm8 null 71409664
+echo-server-9f44df48b-dtxm8 echo-server 38227968
+echo-server-9f44df48b-dtxm8 oauth-proxy 32468992
+echo-server-9f44df48b-dtxm8 POD 0
+

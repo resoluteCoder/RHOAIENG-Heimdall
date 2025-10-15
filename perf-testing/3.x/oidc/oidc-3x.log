@@ -1,0 +1,277 @@
+Gateway Benchmark Results - RHOAI 3.x with OAuth
+Generated: Wed Oct 22 11:59:58 AM CDT 2025
+Configuration: 10000 requests, 50 concurrency, 5 iterations
+Gateway URL: https://data-science-gateway.apps.rosa.t1g3t1j7h7c4e1e.6ing.p3.openshiftapps.com/echo
+
+================================================================================
+
+=== ITERATION 1 ===
+Started: Wed Oct 22 12:01:16 PM CDT 2025
+
+
+Summary:
+  Total:	567.5979 secs
+  Slowest:	3.9289 secs
+  Fastest:	0.1989 secs
+  Average:	2.8311 secs
+  Requests/sec:	17.6181
+  
+  Total data:	95340000 bytes
+  Size/request:	9534 bytes
+
+Response time histogram:
+  0.199 [1]	|
+  0.572 [6]	|
+  0.945 [6]	|
+  1.318 [7]	|
+  1.691 [6]	|
+  2.064 [6]	|
+  2.437 [6]	|
+  2.810 [4443]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  3.183 [5417]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  3.556 [52]	|
+  3.929 [50]	|
+
+
+Latency distribution:
+  10% in 2.7311 secs
+  25% in 2.7705 secs
+  50% in 2.8196 secs
+  75% in 2.8822 secs
+  90% in 2.9552 secs
+  95% in 2.9939 secs
+  99% in 3.1886 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:	0.0006 secs, 0.1989 secs, 3.9289 secs
+  DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0022 secs
+  req write:	0.0000 secs, 0.0000 secs, 0.0013 secs
+  resp wait:	2.8301 secs, 0.1066 secs, 3.9287 secs
+  resp read:	0.0002 secs, 0.0000 secs, 0.0161 secs
+
+Status code distribution:
+  [200]	10000 responses
+
+
+
+
+Completed: Wed Oct 22 12:10:48 PM CDT 2025
+
+--------------------------------------------------------------------------------
+
+=== ITERATION 2 ===
+Started: Wed Oct 22 12:10:58 PM CDT 2025
+
+
+Summary:
+  Total:	571.4596 secs
+  Slowest:	18.3564 secs
+  Fastest:	0.0961 secs
+  Average:	2.8169 secs
+  Requests/sec:	17.4990
+  
+  Total data:	95340000 bytes
+  Size/request:	9534 bytes
+
+Response time histogram:
+  0.096 [1]	|
+  1.922 [167]	|■
+  3.748 [9766]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  5.574 [17]	|
+  7.400 [0]	|
+  9.226 [0]	|
+  11.052 [0]	|
+  12.878 [0]	|
+  14.704 [0]	|
+  16.530 [21]	|
+  18.356 [28]	|
+
+
+Latency distribution:
+  10% in 2.6616 secs
+  25% in 2.7144 secs
+  50% in 2.7748 secs
+  75% in 2.8379 secs
+  90% in 2.9111 secs
+  95% in 2.9697 secs
+  99% in 3.3887 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:	0.0010 secs, 0.0961 secs, 18.3564 secs
+  DNS-lookup:	0.0003 secs, 0.0000 secs, 0.0510 secs
+  req write:	0.0000 secs, 0.0000 secs, 0.0015 secs
+  resp wait:	2.7401 secs, 0.0957 secs, 3.9541 secs
+  resp read:	0.0002 secs, 0.0000 secs, 0.0198 secs
+
+Status code distribution:
+  [200]	10000 responses
+
+
+
+
+Completed: Wed Oct 22 12:20:33 PM CDT 2025
+
+--------------------------------------------------------------------------------
+
+=== ITERATION 3 ===
+Started: Wed Oct 22 12:20:43 PM CDT 2025
+
+
+Summary:
+  Total:	564.2627 secs
+  Slowest:	3.3167 secs
+  Fastest:	0.2996 secs
+  Average:	2.8148 secs
+  Requests/sec:	17.7222
+  
+  Total data:	95340000 bytes
+  Size/request:	9534 bytes
+
+Response time histogram:
+  0.300 [1]	|
+  0.601 [5]	|
+  0.903 [5]	|
+  1.205 [5]	|
+  1.506 [6]	|
+  1.808 [5]	|
+  2.110 [5]	|
+  2.412 [7]	|
+  2.713 [1197]	|■■■■■■
+  3.015 [8431]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  3.317 [333]	|■■
+
+
+Latency distribution:
+  10% in 2.7039 secs
+  25% in 2.7538 secs
+  50% in 2.8112 secs
+  75% in 2.8746 secs
+  90% in 2.9387 secs
+  95% in 2.9851 secs
+  99% in 3.0985 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:	0.0010 secs, 0.2996 secs, 3.3167 secs
+  DNS-lookup:	0.0003 secs, 0.0000 secs, 0.0547 secs
+  req write:	0.0000 secs, 0.0000 secs, 0.0019 secs
+  resp wait:	2.8135 secs, 0.1141 secs, 3.3166 secs
+  resp read:	0.0003 secs, 0.0000 secs, 0.0195 secs
+
+Status code distribution:
+  [200]	10000 responses
+
+
+
+
+Completed: Wed Oct 22 12:30:12 PM CDT 2025
+
+--------------------------------------------------------------------------------
+
+=== ITERATION 4 ===
+Started: Wed Oct 22 12:30:22 PM CDT 2025
+
+
+Summary:
+  Total:	561.0488 secs
+  Slowest:	3.9874 secs
+  Fastest:	0.2607 secs
+  Average:	2.7983 secs
+  Requests/sec:	17.8238
+  
+  Total data:	95340000 bytes
+  Size/request:	9534 bytes
+
+Response time histogram:
+  0.261 [1]	|
+  0.633 [6]	|
+  1.006 [7]	|
+  1.379 [7]	|
+  1.751 [5]	|
+  2.124 [6]	|
+  2.497 [7]	|
+  2.869 [7802]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  3.242 [2109]	|■■■■■■■■■■■
+  3.615 [0]	|
+  3.987 [50]	|
+
+
+Latency distribution:
+  10% in 2.6913 secs
+  25% in 2.7311 secs
+  50% in 2.7875 secs
+  75% in 2.8582 secs
+  90% in 2.9239 secs
+  95% in 2.9717 secs
+  99% in 3.0951 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:	0.0008 secs, 0.2607 secs, 3.9874 secs
+  DNS-lookup:	0.0002 secs, 0.0000 secs, 0.0496 secs
+  req write:	0.0000 secs, 0.0000 secs, 0.0017 secs
+  resp wait:	2.7970 secs, 0.1164 secs, 3.9872 secs
+  resp read:	0.0003 secs, 0.0000 secs, 0.0141 secs
+
+Status code distribution:
+  [200]	10000 responses
+
+
+
+
+Completed: Wed Oct 22 12:39:46 PM CDT 2025
+
+--------------------------------------------------------------------------------
+
+=== ITERATION 5 ===
+Started: Wed Oct 22 12:39:56 PM CDT 2025
+
+
+Summary:
+  Total:	562.2645 secs
+  Slowest:	7.3152 secs
+  Fastest:	0.2854 secs
+  Average:	2.7997 secs
+  Requests/sec:	17.7852
+  
+  Total data:	95340000 bytes
+  Size/request:	9534 bytes
+
+Response time histogram:
+  0.285 [1]	|
+  0.988 [19]	|
+  1.691 [36]	|
+  2.394 [52]	|
+  3.097 [9835]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  3.800 [42]	|
+  4.503 [3]	|
+  5.206 [3]	|
+  5.909 [3]	|
+  6.612 [3]	|
+  7.315 [3]	|
+
+
+Latency distribution:
+  10% in 2.6925 secs
+  25% in 2.7375 secs
+  50% in 2.7981 secs
+  75% in 2.8705 secs
+  90% in 2.9325 secs
+  95% in 2.9716 secs
+  99% in 3.0620 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:	0.0009 secs, 0.2854 secs, 7.3152 secs
+  DNS-lookup:	0.0003 secs, 0.0000 secs, 0.0607 secs
+  req write:	0.0000 secs, 0.0000 secs, 0.0014 secs
+  resp wait:	2.7985 secs, 0.1075 secs, 7.1374 secs
+  resp read:	0.0003 secs, 0.0000 secs, 0.0140 secs
+
+Status code distribution:
+  [200]	10000 responses
+
+
+
+
+Completed: Wed Oct 22 12:49:22 PM CDT 2025
+
+--------------------------------------------------------------------------------
+

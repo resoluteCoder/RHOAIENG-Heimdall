@@ -1,0 +1,171 @@
+Resource Metrics - RHOAI 3.x Gateway Components
+Generated: Wed Oct 22 11:59:58 AM CDT 2025
+Configuration: Collecting metrics every 5 seconds during benchmark
+
+Metrics Collected:
+- kube-auth-proxy CPU usage
+- kube-auth-proxy Memory usage
+- echo-server CPU/Memory usage
+
+================================================================================
+
+=== ITERATION 1 - START - Wed Oct 22 12:01:16 PM CDT 2025 ===
+## kube-auth-proxy CPU (rate over 5m):
+kube-auth-proxy-84959cc46c-fl8fw 0.0008488458787330575
+## kube-auth-proxy Memory (bytes):
+kube-auth-proxy-84959cc46c-fl8fw 21495808
+## echo-server CPU (rate over 5m):
+echo-server-7d9b8489cb-smpxk null 0.03606397106823061
+echo-server-7d9b8489cb-smpxk POD 0
+echo-server-7d9b8489cb-smpxk echo-server 0.03687081990929098
+echo-server-7d9b8489cb-smpxk kube-rbac-proxy 0.0009519247475624949
+## echo-server Memory (bytes):
+echo-server-7d9b8489cb-smpxk null 76398592
+echo-server-7d9b8489cb-smpxk echo-server 39591936
+echo-server-7d9b8489cb-smpxk kube-rbac-proxy 36028416
+echo-server-7d9b8489cb-smpxk POD 0
+
+=== ITERATION 1 - END - Wed Oct 22 12:10:46 PM CDT 2025 ===
+## kube-auth-proxy CPU (rate over 5m):
+kube-auth-proxy-84959cc46c-fl8fw 0.010039692702846782
+## kube-auth-proxy Memory (bytes):
+kube-auth-proxy-84959cc46c-fl8fw 22376448
+## echo-server CPU (rate over 5m):
+echo-server-7d9b8489cb-smpxk null 0.7144168140024645
+echo-server-7d9b8489cb-smpxk POD 0
+echo-server-7d9b8489cb-smpxk echo-server 0.6563828144188024
+echo-server-7d9b8489cb-smpxk kube-rbac-proxy 0.012636987850101002
+## echo-server Memory (bytes):
+echo-server-7d9b8489cb-smpxk null 85454848
+echo-server-7d9b8489cb-smpxk POD 0
+echo-server-7d9b8489cb-smpxk echo-server 39620608
+echo-server-7d9b8489cb-smpxk kube-rbac-proxy 45293568
+
+=== ITERATION 2 - START - Wed Oct 22 12:10:58 PM CDT 2025 ===
+## kube-auth-proxy CPU (rate over 5m):
+kube-auth-proxy-84959cc46c-fl8fw 0.010693567757479918
+## kube-auth-proxy Memory (bytes):
+kube-auth-proxy-84959cc46c-fl8fw 23134208
+## echo-server CPU (rate over 5m):
+echo-server-7d9b8489cb-smpxk null 0.7149691459529299
+echo-server-7d9b8489cb-smpxk echo-server 0.7015288771385328
+echo-server-7d9b8489cb-smpxk kube-rbac-proxy 0.012631069977843424
+echo-server-7d9b8489cb-smpxk POD 0
+## echo-server Memory (bytes):
+echo-server-7d9b8489cb-smpxk null 85553152
+echo-server-7d9b8489cb-smpxk echo-server 39858176
+echo-server-7d9b8489cb-smpxk kube-rbac-proxy 44871680
+echo-server-7d9b8489cb-smpxk POD 0
+
+=== ITERATION 2 - END - Wed Oct 22 12:20:31 PM CDT 2025 ===
+## kube-auth-proxy CPU (rate over 5m):
+kube-auth-proxy-84959cc46c-fl8fw 0.011083557147120263
+## kube-auth-proxy Memory (bytes):
+kube-auth-proxy-84959cc46c-fl8fw 23461888
+## echo-server CPU (rate over 5m):
+echo-server-7d9b8489cb-smpxk null 0.7203150533061994
+echo-server-7d9b8489cb-smpxk POD 0
+echo-server-7d9b8489cb-smpxk echo-server 0.7086265152537675
+echo-server-7d9b8489cb-smpxk kube-rbac-proxy 0.011710173539128713
+## echo-server Memory (bytes):
+echo-server-7d9b8489cb-smpxk null 88231936
+echo-server-7d9b8489cb-smpxk POD 0
+echo-server-7d9b8489cb-smpxk echo-server 39608320
+echo-server-7d9b8489cb-smpxk kube-rbac-proxy 46977024
+
+=== ITERATION 3 - START - Wed Oct 22 12:20:43 PM CDT 2025 ===
+## kube-auth-proxy CPU (rate over 5m):
+kube-auth-proxy-84959cc46c-fl8fw 0.010563797565945264
+## kube-auth-proxy Memory (bytes):
+kube-auth-proxy-84959cc46c-fl8fw 23461888
+## echo-server CPU (rate over 5m):
+echo-server-7d9b8489cb-smpxk null 0.7203150533061994
+echo-server-7d9b8489cb-smpxk POD 0
+echo-server-7d9b8489cb-smpxk echo-server 0.7084715096232476
+echo-server-7d9b8489cb-smpxk kube-rbac-proxy 0.01171017353912871
+## echo-server Memory (bytes):
+echo-server-7d9b8489cb-smpxk null 88231936
+echo-server-7d9b8489cb-smpxk POD 0
+echo-server-7d9b8489cb-smpxk echo-server 39608320
+echo-server-7d9b8489cb-smpxk kube-rbac-proxy 46977024
+
+=== ITERATION 3 - END - Wed Oct 22 12:30:09 PM CDT 2025 ===
+## kube-auth-proxy CPU (rate over 5m):
+kube-auth-proxy-84959cc46c-fl8fw 0.00990428167690671
+## kube-auth-proxy Memory (bytes):
+kube-auth-proxy-84959cc46c-fl8fw 22999040
+## echo-server CPU (rate over 5m):
+echo-server-7d9b8489cb-smpxk null 0.7211355715879187
+echo-server-7d9b8489cb-smpxk POD 0
+echo-server-7d9b8489cb-smpxk echo-server 0.7074281752907262
+echo-server-7d9b8489cb-smpxk kube-rbac-proxy 0.01274665208231429
+## echo-server Memory (bytes):
+echo-server-7d9b8489cb-smpxk null 87371776
+echo-server-7d9b8489cb-smpxk POD 0
+echo-server-7d9b8489cb-smpxk echo-server 40112128
+echo-server-7d9b8489cb-smpxk kube-rbac-proxy 46940160
+
+=== ITERATION 4 - START - Wed Oct 22 12:30:22 PM CDT 2025 ===
+## kube-auth-proxy CPU (rate over 5m):
+kube-auth-proxy-84959cc46c-fl8fw 0.009488746802450577
+## kube-auth-proxy Memory (bytes):
+kube-auth-proxy-84959cc46c-fl8fw 22999040
+## echo-server CPU (rate over 5m):
+echo-server-7d9b8489cb-smpxk null 0.7133208903212962
+echo-server-7d9b8489cb-smpxk echo-server 0.7023664400741575
+echo-server-7d9b8489cb-smpxk kube-rbac-proxy 0.01277969652768569
+echo-server-7d9b8489cb-smpxk POD 0
+## echo-server Memory (bytes):
+echo-server-7d9b8489cb-smpxk null 87371776
+echo-server-7d9b8489cb-smpxk POD 0
+echo-server-7d9b8489cb-smpxk echo-server 40112128
+echo-server-7d9b8489cb-smpxk kube-rbac-proxy 46940160
+
+=== ITERATION 4 - END - Wed Oct 22 12:39:44 PM CDT 2025 ===
+## kube-auth-proxy CPU (rate over 5m):
+kube-auth-proxy-84959cc46c-fl8fw 0.01094670388988225
+## kube-auth-proxy Memory (bytes):
+kube-auth-proxy-84959cc46c-fl8fw 23126016
+## echo-server CPU (rate over 5m):
+echo-server-7d9b8489cb-smpxk null 0.7185496622714387
+echo-server-7d9b8489cb-smpxk echo-server 0.7068664864202396
+echo-server-7d9b8489cb-smpxk kube-rbac-proxy 0.011759186494808397
+echo-server-7d9b8489cb-smpxk POD 0
+## echo-server Memory (bytes):
+echo-server-7d9b8489cb-smpxk null 88006656
+echo-server-7d9b8489cb-smpxk POD 0
+echo-server-7d9b8489cb-smpxk echo-server 39616512
+echo-server-7d9b8489cb-smpxk kube-rbac-proxy 47583232
+
+=== ITERATION 5 - START - Wed Oct 22 12:39:56 PM CDT 2025 ===
+## kube-auth-proxy CPU (rate over 5m):
+kube-auth-proxy-84959cc46c-fl8fw 0.01072102172068303
+## kube-auth-proxy Memory (bytes):
+kube-auth-proxy-84959cc46c-fl8fw 22437888
+## echo-server CPU (rate over 5m):
+echo-server-7d9b8489cb-smpxk null 0.6879172839685669
+echo-server-7d9b8489cb-smpxk POD 0
+echo-server-7d9b8489cb-smpxk echo-server 0.6934546529823612
+echo-server-7d9b8489cb-smpxk kube-rbac-proxy 0.011351931987469813
+## echo-server Memory (bytes):
+echo-server-7d9b8489cb-smpxk null 87887872
+echo-server-7d9b8489cb-smpxk POD 0
+echo-server-7d9b8489cb-smpxk echo-server 39591936
+echo-server-7d9b8489cb-smpxk kube-rbac-proxy 47464448
+
+=== ITERATION 5 - END - Wed Oct 22 12:49:20 PM CDT 2025 ===
+## kube-auth-proxy CPU (rate over 5m):
+kube-auth-proxy-84959cc46c-fl8fw 0.009404268750000003
+## kube-auth-proxy Memory (bytes):
+kube-auth-proxy-84959cc46c-fl8fw 22589440
+## echo-server CPU (rate over 5m):
+echo-server-7d9b8489cb-smpxk null 0.7175426558713579
+echo-server-7d9b8489cb-smpxk echo-server 0.7051506039766842
+echo-server-7d9b8489cb-smpxk kube-rbac-proxy 0.012759407948397519
+echo-server-7d9b8489cb-smpxk POD 0
+## echo-server Memory (bytes):
+echo-server-7d9b8489cb-smpxk null 88436736
+echo-server-7d9b8489cb-smpxk echo-server 39600128
+echo-server-7d9b8489cb-smpxk kube-rbac-proxy 47747072
+echo-server-7d9b8489cb-smpxk POD 0
+

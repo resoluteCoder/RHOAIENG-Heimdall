@@ -1,0 +1,130 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echo-server
+  namespace: opendatahub
+  labels:
+    app: echo-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: echo-server
+  template:
+    metadata:
+      labels:
+        app: echo-server
+    spec:
+      serviceAccount: echo-server
+      containers:
+      - name: echo-server
+        image: registry.tannerjc.net/echo-server:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+      - name: oauth-proxy
+        image: quay.io/openshift/origin-oauth-proxy:4.15
+        ports:
+        - containerPort: 8443
+          name: https
+        args:
+        - --https-address=:8443
+        - --provider=openshift
+        - --openshift-service-account=echo-server
+        - --upstream=http://localhost:8080
+        - --tls-cert=/etc/tls/private/tls.crt
+        - --tls-key=/etc/tls/private/tls.key
+        - --cookie-secret-file=/etc/oauth-proxy/cookie-secret
+        - --openshift-ca=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+        - --openshift-delegate-urls={"/":{"resource":"namespace","verb":"get"}}
+        - --skip-auth-regex=^/metrics
+        volumeMounts:
+        - mountPath: /etc/tls/private
+          name: echo-server-tls
+          readOnly: true
+        - mountPath: /etc/oauth-proxy
+          name: oauth-proxy-secret
+          readOnly: true
+      volumes:
+      - name: echo-server-tls
+        secret:
+          secretName: echo-server-tls
+      - name: oauth-proxy-secret
+        secret:
+          secretName: echo-server-oauth-proxy
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: echo-server
+  namespace: opendatahub
+  labels:
+    app: echo-server
+  annotations:
+    service.beta.openshift.io/serving-cert-secret-name: echo-server-tls
+spec:
+  selector:
+    app: echo-server
+  ports:
+  - name: https
+    port: 8443
+    targetPort: 8443
+    protocol: TCP
+  type: ClusterIP
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: echo-server-oauth-proxy
+  namespace: opendatahub
+  labels:
+    app: echo-server
+type: Opaque
+stringData:
+  # Generate a random secret with: python3 -c 'import os,base64; print(base64.b64encode(os.urandom(32)).decode())'
+  cookie-secret: "REPLACE_WITH_RANDOM_SECRET"
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: echo-server
+  namespace: opendatahub
+  labels:
+    app: echo-server
+spec:
+  to:
+    kind: Service
+    name: echo-server
+  port:
+    targetPort: https
+  tls:
+    termination: reencrypt
+    insecureEdgeTerminationPolicy: Redirect
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: echo-server
+  namespace: opendatahub
+  labels:
+    app: echo-server
+  annotations:
+    serviceaccounts.openshift.io/oauth-redirectreference.echo-server: '{"kind":"OAuthRedirectReference","apiVersion":"v1","reference":{"kind":"Route","name":"echo-server"}}'
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: echo-server-tokenreview
+  labels:
+    app: echo-server
+subjects:
+- kind: ServiceAccount
+  name: echo-server
+  namespace: opendatahub
+roleRef:
+  kind: ClusterRole
+  name: system:auth-delegator
+  apiGroup: rbac.authorization.k8s.io
