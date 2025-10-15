@@ -1,0 +1,15 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: kube-auth-proxy
+  namespace: openshift-ingress
+  labels:
+    app: kube-auth-proxy
+spec:
+  selector:
+    matchLabels:
+      app: kube-auth-proxy
+  endpoints:
+    - port: metrics
+      scheme: http
+      interval: 30s
