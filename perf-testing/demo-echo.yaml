@@ -18,13 +18,11 @@ spec:
     spec:
       serviceAccount: echo-server
       containers:
-      - name: echo-server
-        image: registry.tannerjc.net/echo-server:latest
+      - name: nginx
+        image: quay.io/cloud-bulldozer/nginx:latest
         ports:
         - containerPort: 8080
-        env:
-        - name: PORT
-          value: "8080"
+          name: http
       - name: kube-rbac-proxy
         image: registry.redhat.io/openshift4/ose-kube-rbac-proxy:latest
         ports:
