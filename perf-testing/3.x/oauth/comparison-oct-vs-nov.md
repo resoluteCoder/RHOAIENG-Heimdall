@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-Switching from the cloud-bulldozer/nginx backend to hashicorp/http-echo resulted in **significant performance improvements** with more stable and predictable behavior.
+Switching from the echo backend to hashicorp/http-echo resulted in **significant performance improvements** with more stable and predictable behavior.
 
 ### Key Improvements
 
@@ -24,7 +24,7 @@ Switching from the cloud-bulldozer/nginx backend to hashicorp/http-echo resulted
 | Parameter | Oct 15 Test | Nov 17 Test | Notes |
 |-----------|-------------|-------------|-------|
 | **Cluster** | b9q3t4p8k3y8k9a.vzrg.p3 | f3d4c3l4i5u4x1v.fcu6.p3 | Different ROSA clusters |
-| **Backend** | cloud-bulldozer/nginx | hashicorp/http-echo | **Key change** |
+| **Backend** | echo | hashicorp/http-echo | **Key change** |
 | **Requests/iteration** | 10,000 | 10,000 | Same |
 | **Concurrency** | 50 | 50 | Same |
 | **Iterations** | 5 | 5 | Same |
@@ -151,8 +151,8 @@ The only difference was the backend service implementation.
 | **RBAC proxy Memory** | ~47-50 MB | 13.2 MB | -34.3 MB ✅ |
 
 **Analysis:**
-- nginx backend used **73% CPU** vs http-echo's **1.03% CPU** (98.6% reduction!)
-- nginx was the bottleneck in October test
+- custom-echo backend used **73% CPU** vs http-echo's **1.03% CPU** (98.6% reduction!)
+- custom-echo was the bottleneck in October test
 - http-echo's minimal overhead allows more accurate measurement of gateway/auth stack
 - Total pod resource usage dropped from ~90 MB to ~40 MB
 
@@ -161,23 +161,23 @@ The only difference was the backend service implementation.
 ### Why Did November Perform Better?
 
 1. **Backend Efficiency:**
-   - nginx: Complex web server with full HTTP processing, compression, logging, etc.
+   - custom-echo: Complex web server with full HTTP processing, compression, logging, etc.
    - http-echo: Ultra-lightweight Go binary that just echoes a response
-   - nginx consumed 73% CPU, becoming the bottleneck
+   - custom-echo consumed 73% CPU, becoming the bottleneck
    - http-echo uses 1% CPU, allowing auth stack to be the focus
 
 2. **Consistency:**
-   - nginx had variable processing time under load
+   - custom-echo had variable processing time under load
    - http-echo has constant, minimal processing time
    - Led to more predictable latency distribution
 
 3. **No Timeout Errors:**
-   - nginx occasionally took >12s to respond under load
+   - custom-echo occasionally took >12s to respond under load
    - http-echo never exceeded 5.2s even at P99+
-   - Indicates nginx was resource-constrained
+   - Indicates custom-echo was resource-constrained
 
 4. **Better Test Isolation:**
-   - October test was measuring nginx performance as much as gateway performance
+   - October test was measuring custom-echo performance as much as gateway performance
    - November test isolates gateway/auth stack behavior
    - More accurate representation of authentication overhead
 
@@ -204,7 +204,7 @@ Despite overall improvements, P95 increased from 2.80s to 3.14s (+12.1%).
 
 4. **Measurement accuracy:**
    - With faster backend, auth overhead is more visible
-   - Previous test was dominated by nginx processing time
+   - Previous test was dominated by custom-echo processing time
 
 ## Conclusions
 

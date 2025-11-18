@@ -1,0 +1,50 @@
+# Environment files
+.env
+.env.*
+*.env
+
+# Secrets and credentials
+*secret*
+*credentials*
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Temporary test outputs
+tmp/
+temp/
+*.tmp
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+vendor/
+
+# Build artifacts
+bin/
+build/
+dist/

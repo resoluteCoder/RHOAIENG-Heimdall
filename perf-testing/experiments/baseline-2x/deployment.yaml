@@ -1,0 +1,10 @@
+# Baseline 2.x - Route + oauth-proxy
+# This uses the existing echo-server-2x deployment
+
+# Already deployed at:
+# - Deployment: echo-server-2x
+# - Service: echo-server-2x
+# - Route: echo-server-2x
+# - Endpoint: https://echo-server-2x-opendatahub.apps.rosa.f3d4c3l4i5u4x1v.fcu6.p3.openshiftapps.com
+
+# See: /home/santiago/stuff/rh-projects/RHOAIENG-Heimdall/perf-testing/2.x/demo-echo-2x.yaml
