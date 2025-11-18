@@ -8,7 +8,7 @@ set -e
 # Auto-detect Route URL if not provided
 if [ -z "$ROUTE_URL" ]; then
     echo "Auto-detecting Route URL..."
-    ROUTE_HOST=$(oc get route -n opendatahub echo-server -o jsonpath='{.spec.host}' 2>/dev/null)
+    ROUTE_HOST=$(oc get route -n opendatahub echo-server-2x -o jsonpath='{.spec.host}' 2>/dev/null)
     if [ -n "$ROUTE_HOST" ]; then
         ROUTE_URL="https://${ROUTE_HOST}"
         echo "✓ Detected Route URL: $ROUTE_URL"
@@ -61,10 +61,15 @@ if ! command -v oc &> /dev/null; then
     exit 1
 fi
 
-# Verify token is set
+# Get token from oc if not set
 if [ -z "$TOKEN" ]; then
-    echo -e "${YELLOW}Error: No auth token found. Set TOKEN env var or login with 'oc login'${NC}"
-    exit 1
+    echo "Getting auth token from oc..."
+    TOKEN=$(oc whoami -t 2>/dev/null)
+    if [ -z "$TOKEN" ]; then
+        echo -e "${YELLOW}Error: No auth token found. Set TOKEN env var or login with 'oc login'${NC}"
+        exit 1
+    fi
+    echo -e "${GREEN}✓ Got token from oc${NC}"
 fi
 
 # Test endpoint connectivity

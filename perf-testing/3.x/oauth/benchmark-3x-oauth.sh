@@ -62,10 +62,15 @@ if ! command -v oc &> /dev/null; then
     exit 1
 fi
 
-# Verify token is set
+# Get token from oc if not set
 if [ -z "$TOKEN" ]; then
-    echo -e "${YELLOW}Error: No auth token found. Set TOKEN env var or login with 'oc login'${NC}"
-    exit 1
+    echo "Getting auth token from oc..."
+    TOKEN=$(oc whoami -t 2>/dev/null)
+    if [ -z "$TOKEN" ]; then
+        echo -e "${YELLOW}Error: No auth token found. Set TOKEN env var or login with 'oc login'${NC}"
+        exit 1
+    fi
+    echo -e "${GREEN}✓ Got token from oc${NC}"
 fi
 
 # Test endpoint connectivity
