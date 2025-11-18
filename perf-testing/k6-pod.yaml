@@ -1,0 +1,124 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: k6-loadtest-script
+  namespace: opendatahub
+data:
+  loadtest-rps.js: |
+    import http from 'k6/http';
+    import { check, sleep } from 'k6';
+    import { textSummary } from 'https://jslib.k6.io/k6-summary/0.0.1/index.js';
+
+    // Environment variables:
+    // - URL: The endpoint to test
+    // - TOKEN: OAuth Bearer token
+    // - RPS: Requests per second (default: 100)
+    // - DURATION: Test duration (default: '1m')
+    // - PREALLOC_VUS: Pre-allocated VUs (default: 10)
+    // - MAX_VUS: Maximum VUs that can be scaled to (default: 100)
+
+    const URL = __ENV.URL || 'https://localhost:8080/echo';
+    const TOKEN = __ENV.TOKEN || '';
+    const RPS = parseInt(__ENV.RPS) || 100;
+    const DURATION = __ENV.DURATION || '1m';
+    const PREALLOC_VUS = parseInt(__ENV.PREALLOC_VUS) || 10;
+    const MAX_VUS = parseInt(__ENV.MAX_VUS) || 100;
+
+    export const options = {
+      scenarios: {
+        constant_rps: {
+          executor: 'constant-arrival-rate',
+          rate: RPS, // requests per second
+          timeUnit: '1s',
+          duration: DURATION,
+          preAllocatedVUs: PREALLOC_VUS, // initial VUs to allocate
+          maxVUs: MAX_VUS, // maximum VUs to scale to if needed
+        },
+      },
+      thresholds: {
+        http_req_duration: ['p(95)<500', 'p(99)<1000'], // 95% < 200ms, 99% < 1s
+        http_req_failed: ['rate<0.01'], // less than 1% errors
+      },
+    };
+
+    export default function () {
+      const params = {
+        headers: {
+          'Authorization': `Bearer ${TOKEN}`,
+          'Accept': 'text/html',
+        },
+      };
+
+      const response = http.get(URL, params);
+
+      check(response, {
+        'status is 200': (r) => r.status === 200,
+        'response time < 500ms': (r) => r.timings.duration < 500,
+        'response time < 1s': (r) => r.timings.duration < 1000,
+      });
+    }
+
+    export function handleSummary(data) {
+      const httpReqs = data.metrics.http_reqs;
+      const actualRPS = httpReqs ? (httpReqs.values.count / httpReqs.values.rate).toFixed(2) : 'N/A';
+      
+      console.log('\n=== Fixed RPS Load Test Summary ===');
+      console.log(`Target RPS: ${RPS}`);
+      console.log(`Actual RPS: ${actualRPS}`);
+      console.log(`Duration: ${DURATION}`);
+      console.log(`URL: ${URL}`);
+      console.log(`Pre-allocated VUs: ${PREALLOC_VUS}`);
+      console.log(`Max VUs: ${MAX_VUS}`);
+      
+      return {
+        'stdout': textSummary(data, { indent: ' ', enableColors: true }),
+      };
+    }
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: k6-benchmark
+  namespace: opendatahub
+  labels:
+    app: k6-benchmark
+spec:
+  containers:
+  - name: k6
+    image: grafana/k6:master
+    command:
+    - /bin/sh
+    - -c
+    - |
+      echo "k6 load testing tool ready with load test scripts from ConfigMap."
+      echo ""
+      echo "Available scripts:"
+      echo "  /scripts/loadtest-rps.js - Fixed requests per second (RPS)"
+      echo ""
+      echo "To run tests, exec into this pod:"
+      echo "  kubectl exec -it k6-benchmark -n opendatahub -- sh"
+      echo ""
+      echo "Examples:"
+      echo ""
+      echo "# Fixed RPS test:"
+      echo "  k6 run -e URL=<url> -e TOKEN=<token> -e RPS=100 -e DURATION=1m /scripts/loadtest-rps.js"
+      echo ""
+      echo "# With optional parameters for RPS test:"
+      echo "  k6 run -e URL=<url> -e TOKEN=<token> -e RPS=200 -e DURATION=5m -e PREALLOC_VUS=20 -e MAX_VUS=200 /scripts/loadtest-rps.js"
+      echo ""
+      sleep infinity
+    volumeMounts:
+    - name: loadtest-script
+      mountPath: /scripts
+      readOnly: true
+    resources:
+      requests:
+        memory: "2Gi"
+        cpu: "1000m"
+      limits:
+        memory: "2Gi"
+  volumes:
+  - name: loadtest-script
+    configMap:
+      name: k6-loadtest-script
+  restartPolicy: Never
