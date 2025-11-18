@@ -1,0 +1,97 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echo-server-gateway-direct
+  namespace: opendatahub
+  labels:
+    app: echo-server-gateway-direct
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: echo-server-gateway-direct
+  template:
+    metadata:
+      labels:
+        app: echo-server-gateway-direct
+    spec:
+      containers:
+      - name: echo-server
+        image: hashicorp/http-echo:latest
+        args:
+          - "-text=echo response"
+          - "-listen=:8080"
+        ports:
+        - containerPort: 8080
+          name: http
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: echo-server-gateway-direct
+  namespace: opendatahub
+  labels:
+    app: echo-server-gateway-direct
+spec:
+  selector:
+    app: echo-server-gateway-direct
+  ports:
+  - name: http
+    port: 8080
+    targetPort: 8080
+    protocol: TCP
+  type: ClusterIP
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: GatewayClass
+metadata:
+  name: gateway-no-auth-class
+spec:
+  controllerName: openshift.io/gateway-controller/v1
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata:
+  name: gateway-no-auth
+  namespace: openshift-ingress
+spec:
+  gatewayClassName: gateway-no-auth-class
+  listeners:
+  - name: https
+    hostname: gateway-no-auth.apps.rosa.f3d4c3l4i5u4x1v.fcu6.p3.openshiftapps.com
+    port: 443
+    protocol: HTTPS
+    allowedRoutes:
+      namespaces:
+        from: Selector
+        selector:
+          matchExpressions:
+          - key: kubernetes.io/metadata.name
+            operator: In
+            values:
+            - openshift-ingress
+            - opendatahub
+    tls:
+      mode: Terminate
+      certificateRefs:
+      - kind: Secret
+        name: default-gateway-tls
+---
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: echo-server-gateway-direct-route
+  namespace: opendatahub
+spec:
+  parentRefs:
+  - name: gateway-no-auth
+    namespace: openshift-ingress
+  rules:
+  - matches:
+    - path:
+        type: PathPrefix
+        value: /
+    backendRefs:
+    - name: echo-server-gateway-direct
+      port: 8080

@@ -1,5 +1,5 @@
 Resource Metrics - RHOAI 2.x Route Components
-Generated: Thu Oct 23 07:26:08 AM CDT 2025
+Generated: Tue Nov 18 09:00:15 AM CST 2025
 Configuration: Collecting metrics every 5 seconds during benchmark
 
 Metrics Collected:
@@ -9,163 +9,303 @@ Metrics Collected:
 
 ================================================================================
 
-=== ITERATION 1 - START - Thu Oct 23 07:26:11 AM CDT 2025 ===
+=== ITERATION 1 - START - Tue Nov 18 09:00:17 AM CST 2025 ===
 ## oauth-proxy CPU (rate over 5m):
-echo-server-9f44df48b-dtxm8 0.0003673036495898996
+echo-server-2x-7b4dd959d4-d9zv6 0.0001236034421211739
 ## oauth-proxy Memory (bytes):
-echo-server-9f44df48b-dtxm8 24317952
+echo-server-2x-7b4dd959d4-d9zv6 37810176
 ## echo-server CPU (rate over 5m):
-echo-server-9f44df48b-dtxm8 null 0.000698253000196734
-echo-server-9f44df48b-dtxm8 echo-server 0.000325696150524471
-echo-server-9f44df48b-dtxm8 oauth-proxy 0.00036684537557331645
-echo-server-9f44df48b-dtxm8 POD 0
+echo-server-2x-7b4dd959d4-d9zv6 null 0.00012442402797025706
+echo-server-2x-7b4dd959d4-d9zv6 echo-server 0.000004347650898541368
+echo-server-2x-7b4dd959d4-d9zv6 oauth-proxy 0.00012360344212117392
+echo-server-2x-7b4dd959d4-d9zv6 POD 0
+echo-server-gateway-direct-f9f466667-lt25b null 2.454138702925398e-07
+echo-server-gateway-direct-f9f466667-lt25b echo-server 3.138316576739409e-07
+echo-server-gateway-direct-f9f466667-lt25b POD 0
+echo-server-b4c875645-5qqnd null 0.00003913484385293561
+echo-server-b4c875645-5qqnd POD 0
+echo-server-b4c875645-5qqnd echo-server 0.000005341463152501851
+echo-server-b4c875645-5qqnd kube-rbac-proxy 0.000033182734314182345
 ## echo-server Memory (bytes):
-echo-server-9f44df48b-dtxm8 null 62754816
-echo-server-9f44df48b-dtxm8 echo-server 36761600
-echo-server-9f44df48b-dtxm8 oauth-proxy 24317952
-echo-server-9f44df48b-dtxm8 POD 0
+echo-server-2x-7b4dd959d4-d9zv6 null 49082368
+echo-server-2x-7b4dd959d4-d9zv6 echo-server 10518528
+echo-server-2x-7b4dd959d4-d9zv6 oauth-proxy 37810176
+echo-server-2x-7b4dd959d4-d9zv6 POD 0
+echo-server-gateway-direct-f9f466667-lt25b null 3211264
+echo-server-gateway-direct-f9f466667-lt25b echo-server 2826240
+echo-server-gateway-direct-f9f466667-lt25b POD 0
+echo-server-b4c875645-5qqnd null 31121408
+echo-server-b4c875645-5qqnd POD 0
+echo-server-b4c875645-5qqnd echo-server 8978432
+echo-server-b4c875645-5qqnd kube-rbac-proxy 21417984
 
-=== ITERATION 1 - END - Thu Oct 23 07:26:23 AM CDT 2025 ===
+=== ITERATION 1 - END - Tue Nov 18 09:00:28 AM CST 2025 ===
 ## oauth-proxy CPU (rate over 5m):
-echo-server-9f44df48b-dtxm8 0.00980627742358734
+echo-server-2x-7b4dd959d4-d9zv6 0.00011569991757857758
 ## oauth-proxy Memory (bytes):
-echo-server-9f44df48b-dtxm8 24317952
+echo-server-2x-7b4dd959d4-d9zv6 37810176
 ## echo-server CPU (rate over 5m):
-echo-server-9f44df48b-dtxm8 null 0.0025291590859334305
-echo-server-9f44df48b-dtxm8 echo-server 0.0006962908912210682
-echo-server-9f44df48b-dtxm8 oauth-proxy 0.009817363482479422
-echo-server-9f44df48b-dtxm8 POD 0
+echo-server-2x-7b4dd959d4-d9zv6 null 0.0001214888297115469
+echo-server-2x-7b4dd959d4-d9zv6 echo-server 0.000004347650898541368
+echo-server-2x-7b4dd959d4-d9zv6 oauth-proxy 0.00011557507810203522
+echo-server-2x-7b4dd959d4-d9zv6 POD 0
+echo-server-gateway-direct-f9f466667-lt25b null 2.5506493263783937e-07
+echo-server-gateway-direct-f9f466667-lt25b echo-server 2.5907481843438783e-07
+echo-server-gateway-direct-f9f466667-lt25b POD 0
+echo-server-b4c875645-5qqnd null 0.00003183000000000102
+echo-server-b4c875645-5qqnd POD 0
+echo-server-b4c875645-5qqnd echo-server 0.000005959899589082347
+echo-server-b4c875645-5qqnd kube-rbac-proxy 0.000030735496034592886
 ## echo-server Memory (bytes):
-echo-server-9f44df48b-dtxm8 null 62754816
-echo-server-9f44df48b-dtxm8 echo-server 36761600
-echo-server-9f44df48b-dtxm8 oauth-proxy 24317952
-echo-server-9f44df48b-dtxm8 POD 0
+echo-server-2x-7b4dd959d4-d9zv6 null 49082368
+echo-server-2x-7b4dd959d4-d9zv6 echo-server 10518528
+echo-server-2x-7b4dd959d4-d9zv6 oauth-proxy 37810176
+echo-server-2x-7b4dd959d4-d9zv6 POD 0
+echo-server-gateway-direct-f9f466667-lt25b null 3211264
+echo-server-gateway-direct-f9f466667-lt25b echo-server 2826240
+echo-server-gateway-direct-f9f466667-lt25b POD 0
+echo-server-b4c875645-5qqnd null 31121408
+echo-server-b4c875645-5qqnd POD 0
+echo-server-b4c875645-5qqnd echo-server 8978432
+echo-server-b4c875645-5qqnd kube-rbac-proxy 21417984
 
-=== ITERATION 2 - START - Thu Oct 23 07:26:34 AM CDT 2025 ===
+=== ITERATION 2 - START - Tue Nov 18 09:00:39 AM CST 2025 ===
 ## oauth-proxy CPU (rate over 5m):
-echo-server-9f44df48b-dtxm8 0.01018197543170239
+echo-server-2x-7b4dd959d4-d9zv6 0.008518055354134827
 ## oauth-proxy Memory (bytes):
-echo-server-9f44df48b-dtxm8 24317952
+echo-server-2x-7b4dd959d4-d9zv6 37810176
 ## echo-server CPU (rate over 5m):
-echo-server-9f44df48b-dtxm8 null 0.0026946397596645656
-echo-server-9f44df48b-dtxm8 echo-server 0.0006962908912210683
-echo-server-9f44df48b-dtxm8 oauth-proxy 0.0003816598898784712
-echo-server-9f44df48b-dtxm8 POD 0
+echo-server-2x-7b4dd959d4-d9zv6 null 0.00011379608108369319
+echo-server-2x-7b4dd959d4-d9zv6 echo-server 0.000004000625026862211
+echo-server-2x-7b4dd959d4-d9zv6 oauth-proxy 0.00010847453079995551
+echo-server-2x-7b4dd959d4-d9zv6 POD 0
+echo-server-gateway-direct-f9f466667-lt25b null 2.5651400817316513e-07
+echo-server-gateway-direct-f9f466667-lt25b echo-server 2.488086072949599e-07
+echo-server-gateway-direct-f9f466667-lt25b POD 0
+echo-server-b4c875645-5qqnd null 0.000033780520332470455
+echo-server-b4c875645-5qqnd POD 0
+echo-server-b4c875645-5qqnd echo-server 0.000003715891795052634
+echo-server-b4c875645-5qqnd kube-rbac-proxy 0.000028772993080980485
 ## echo-server Memory (bytes):
-echo-server-9f44df48b-dtxm8 null 62754816
-echo-server-9f44df48b-dtxm8 echo-server 36761600
-echo-server-9f44df48b-dtxm8 oauth-proxy 24317952
-echo-server-9f44df48b-dtxm8 POD 0
+echo-server-2x-7b4dd959d4-d9zv6 null 57585664
+echo-server-2x-7b4dd959d4-d9zv6 echo-server 11579392
+echo-server-2x-7b4dd959d4-d9zv6 oauth-proxy 45441024
+echo-server-2x-7b4dd959d4-d9zv6 POD 0
+echo-server-gateway-direct-f9f466667-lt25b null 3211264
+echo-server-gateway-direct-f9f466667-lt25b echo-server 2826240
+echo-server-gateway-direct-f9f466667-lt25b POD 0
+echo-server-b4c875645-5qqnd null 31154176
+echo-server-b4c875645-5qqnd POD 0
+echo-server-b4c875645-5qqnd echo-server 8978432
+echo-server-b4c875645-5qqnd kube-rbac-proxy 21417984
 
-=== ITERATION 2 - END - Thu Oct 23 07:26:46 AM CDT 2025 ===
+=== ITERATION 2 - END - Tue Nov 18 09:00:49 AM CST 2025 ===
 ## oauth-proxy CPU (rate over 5m):
-echo-server-9f44df48b-dtxm8 0.020648771990540927
+echo-server-2x-7b4dd959d4-d9zv6 0.008518055354134827
 ## oauth-proxy Memory (bytes):
-echo-server-9f44df48b-dtxm8 32542720
+echo-server-2x-7b4dd959d4-d9zv6 45441024
 ## echo-server CPU (rate over 5m):
-echo-server-9f44df48b-dtxm8 null 0.04592913849715817
-echo-server-9f44df48b-dtxm8 echo-server 0.030851559903058972
-echo-server-9f44df48b-dtxm8 oauth-proxy 0.02067189295300548
-echo-server-9f44df48b-dtxm8 POD 0
+echo-server-2x-7b4dd959d4-d9zv6 null 0.010436670366897662
+echo-server-2x-7b4dd959d4-d9zv6 echo-server 0.0021331359658670382
+echo-server-2x-7b4dd959d4-d9zv6 oauth-proxy 0.008518055354134827
+echo-server-2x-7b4dd959d4-d9zv6 POD 0
+echo-server-gateway-direct-f9f466667-lt25b null 2.540787336099972e-07
+echo-server-gateway-direct-f9f466667-lt25b echo-server 2.909085685143548e-07
+echo-server-gateway-direct-f9f466667-lt25b POD 0
+echo-server-b4c875645-5qqnd null 0.000033780520332470455
+echo-server-b4c875645-5qqnd POD 0
+echo-server-b4c875645-5qqnd echo-server 0.0000037158917950526336
+echo-server-b4c875645-5qqnd kube-rbac-proxy 0.000028772993080980485
 ## echo-server Memory (bytes):
-echo-server-9f44df48b-dtxm8 null 71200768
-echo-server-9f44df48b-dtxm8 echo-server 38248448
-echo-server-9f44df48b-dtxm8 oauth-proxy 32542720
-echo-server-9f44df48b-dtxm8 POD 0
+echo-server-2x-7b4dd959d4-d9zv6 null 57585664
+echo-server-2x-7b4dd959d4-d9zv6 echo-server 11579392
+echo-server-2x-7b4dd959d4-d9zv6 oauth-proxy 45441024
+echo-server-2x-7b4dd959d4-d9zv6 POD 0
+echo-server-gateway-direct-f9f466667-lt25b null 3211264
+echo-server-gateway-direct-f9f466667-lt25b echo-server 2826240
+echo-server-gateway-direct-f9f466667-lt25b POD 0
+echo-server-b4c875645-5qqnd null 31154176
+echo-server-b4c875645-5qqnd POD 0
+echo-server-b4c875645-5qqnd echo-server 8978432
+echo-server-b4c875645-5qqnd kube-rbac-proxy 21417984
 
-=== ITERATION 3 - START - Thu Oct 23 07:26:57 AM CDT 2025 ===
+=== ITERATION 3 - START - Tue Nov 18 09:01:00 AM CST 2025 ===
 ## oauth-proxy CPU (rate over 5m):
-echo-server-9f44df48b-dtxm8 0.02144459696816085
+echo-server-2x-7b4dd959d4-d9zv6 0.008518055354134827
 ## oauth-proxy Memory (bytes):
-echo-server-9f44df48b-dtxm8 32542720
+echo-server-2x-7b4dd959d4-d9zv6 45441024
 ## echo-server CPU (rate over 5m):
-echo-server-9f44df48b-dtxm8 null 0.047170060297603705
-echo-server-9f44df48b-dtxm8 echo-server 0.03147295090498631
-echo-server-9f44df48b-dtxm8 oauth-proxy 0.021468660164205462
-echo-server-9f44df48b-dtxm8 POD 0
+echo-server-2x-7b4dd959d4-d9zv6 null 0.002972099999999996
+echo-server-2x-7b4dd959d4-d9zv6 echo-server 0.002337131742680622
+echo-server-2x-7b4dd959d4-d9zv6 oauth-proxy 0.00953907608401056
+echo-server-2x-7b4dd959d4-d9zv6 POD 0
+echo-server-gateway-direct-f9f466667-lt25b null 2.3502894529950097e-07
+echo-server-gateway-direct-f9f466667-lt25b echo-server 3.3245635997225393e-07
+echo-server-gateway-direct-f9f466667-lt25b POD 0
+echo-server-b4c875645-5qqnd null 0.000032740045271495254
+echo-server-b4c875645-5qqnd POD 0
+echo-server-b4c875645-5qqnd echo-server 0.000003883595280975351
+echo-server-b4c875645-5qqnd kube-rbac-proxy 0.00003120441454733301
 ## echo-server Memory (bytes):
-echo-server-9f44df48b-dtxm8 null 71200768
-echo-server-9f44df48b-dtxm8 echo-server 38248448
-echo-server-9f44df48b-dtxm8 oauth-proxy 32542720
-echo-server-9f44df48b-dtxm8 POD 0
+echo-server-2x-7b4dd959d4-d9zv6 null 57110528
+echo-server-2x-7b4dd959d4-d9zv6 echo-server 11579392
+echo-server-2x-7b4dd959d4-d9zv6 oauth-proxy 45441024
+echo-server-2x-7b4dd959d4-d9zv6 POD 0
+echo-server-gateway-direct-f9f466667-lt25b null 3211264
+echo-server-gateway-direct-f9f466667-lt25b echo-server 2826240
+echo-server-gateway-direct-f9f466667-lt25b POD 0
+echo-server-b4c875645-5qqnd null 31154176
+echo-server-b4c875645-5qqnd POD 0
+echo-server-b4c875645-5qqnd echo-server 8978432
+echo-server-b4c875645-5qqnd kube-rbac-proxy 21417984
 
-=== ITERATION 3 - END - Thu Oct 23 07:27:08 AM CDT 2025 ===
+=== ITERATION 3 - END - Tue Nov 18 09:01:11 AM CST 2025 ===
 ## oauth-proxy CPU (rate over 5m):
-echo-server-9f44df48b-dtxm8 0.022575539476625064
+echo-server-2x-7b4dd959d4-d9zv6 0.016075924537870902
 ## oauth-proxy Memory (bytes):
-echo-server-9f44df48b-dtxm8 32542720
+echo-server-2x-7b4dd959d4-d9zv6 46305280
 ## echo-server CPU (rate over 5m):
-echo-server-9f44df48b-dtxm8 null 0.050161614215
-echo-server-9f44df48b-dtxm8 echo-server 0.03362351329334103
-echo-server-9f44df48b-dtxm8 oauth-proxy 0.022389515343510004
-echo-server-9f44df48b-dtxm8 POD 0
+echo-server-2x-7b4dd959d4-d9zv6 null 0.02179711152150741
+echo-server-2x-7b4dd959d4-d9zv6 echo-server 0.004311785092073959
+echo-server-2x-7b4dd959d4-d9zv6 oauth-proxy 0.016075924537870902
+echo-server-2x-7b4dd959d4-d9zv6 POD 0
+echo-server-gateway-direct-f9f466667-lt25b null 3.078408196926909e-07
+echo-server-gateway-direct-f9f466667-lt25b echo-server 3.085161894822638e-07
+echo-server-gateway-direct-f9f466667-lt25b POD 0
+echo-server-b4c875645-5qqnd null 0.00003183888292956315
+echo-server-b4c875645-5qqnd POD 0
+echo-server-b4c875645-5qqnd echo-server 0.0000038303520192080104
+echo-server-b4c875645-5qqnd kube-rbac-proxy 0.00002741356141963143
 ## echo-server Memory (bytes):
-echo-server-9f44df48b-dtxm8 null 71200768
-echo-server-9f44df48b-dtxm8 echo-server 38248448
-echo-server-9f44df48b-dtxm8 oauth-proxy 32542720
-echo-server-9f44df48b-dtxm8 POD 0
+echo-server-2x-7b4dd959d4-d9zv6 null 58040320
+echo-server-2x-7b4dd959d4-d9zv6 echo-server 10944512
+echo-server-2x-7b4dd959d4-d9zv6 oauth-proxy 46305280
+echo-server-2x-7b4dd959d4-d9zv6 POD 0
+echo-server-gateway-direct-f9f466667-lt25b null 3211264
+echo-server-gateway-direct-f9f466667-lt25b echo-server 2826240
+echo-server-gateway-direct-f9f466667-lt25b POD 0
+echo-server-b4c875645-5qqnd null 31154176
+echo-server-b4c875645-5qqnd POD 0
+echo-server-b4c875645-5qqnd echo-server 8912896
+echo-server-b4c875645-5qqnd kube-rbac-proxy 21417984
 
-=== ITERATION 4 - START - Thu Oct 23 07:27:19 AM CDT 2025 ===
+=== ITERATION 4 - START - Tue Nov 18 09:01:22 AM CST 2025 ===
 ## oauth-proxy CPU (rate over 5m):
-echo-server-9f44df48b-dtxm8 0.028416040029600038
+echo-server-2x-7b4dd959d4-d9zv6 0.016075924537870902
 ## oauth-proxy Memory (bytes):
-echo-server-9f44df48b-dtxm8 31830016
+echo-server-2x-7b4dd959d4-d9zv6 46305280
 ## echo-server CPU (rate over 5m):
-echo-server-9f44df48b-dtxm8 null 0.08821823408832395
-echo-server-9f44df48b-dtxm8 echo-server 0.056761301977363815
-echo-server-9f44df48b-dtxm8 oauth-proxy 0.028449470218367846
-echo-server-9f44df48b-dtxm8 POD 0
+echo-server-2x-7b4dd959d4-d9zv6 null 0.020403690802473708
+echo-server-2x-7b4dd959d4-d9zv6 echo-server 0.004311785092073959
+echo-server-2x-7b4dd959d4-d9zv6 oauth-proxy 0.016075924537870902
+echo-server-2x-7b4dd959d4-d9zv6 POD 0
+echo-server-gateway-direct-f9f466667-lt25b null 2.895437304986638e-07
+echo-server-gateway-direct-f9f466667-lt25b echo-server 3.0851618948226377e-07
+echo-server-gateway-direct-f9f466667-lt25b POD 0
+echo-server-b4c875645-5qqnd null 0.00003084750000000025
+echo-server-b4c875645-5qqnd POD 0
+echo-server-b4c875645-5qqnd echo-server 0.0000044052685067839424
+echo-server-b4c875645-5qqnd kube-rbac-proxy 0.00002741356141963143
 ## echo-server Memory (bytes):
-echo-server-9f44df48b-dtxm8 null 71626752
-echo-server-9f44df48b-dtxm8 echo-server 38232064
-echo-server-9f44df48b-dtxm8 oauth-proxy 31830016
-echo-server-9f44df48b-dtxm8 POD 0
+echo-server-2x-7b4dd959d4-d9zv6 null 58040320
+echo-server-2x-7b4dd959d4-d9zv6 echo-server 10944512
+echo-server-2x-7b4dd959d4-d9zv6 oauth-proxy 46305280
+echo-server-2x-7b4dd959d4-d9zv6 POD 0
+echo-server-gateway-direct-f9f466667-lt25b null 3211264
+echo-server-gateway-direct-f9f466667-lt25b echo-server 2826240
+echo-server-gateway-direct-f9f466667-lt25b POD 0
+echo-server-b4c875645-5qqnd null 31154176
+echo-server-b4c875645-5qqnd POD 0
+echo-server-b4c875645-5qqnd echo-server 8912896
+echo-server-b4c875645-5qqnd kube-rbac-proxy 21417984
 
-=== ITERATION 4 - END - Thu Oct 23 07:27:31 AM CDT 2025 ===
+=== ITERATION 4 - END - Tue Nov 18 09:01:33 AM CST 2025 ===
 ## oauth-proxy CPU (rate over 5m):
-echo-server-9f44df48b-dtxm8 0.027237955925925927
+echo-server-2x-7b4dd959d4-d9zv6 0.01688931760371686
 ## oauth-proxy Memory (bytes):
-echo-server-9f44df48b-dtxm8 31965184
+echo-server-2x-7b4dd959d4-d9zv6 46305280
 ## echo-server CPU (rate over 5m):
-echo-server-9f44df48b-dtxm8 null 0.09737624846521897
-echo-server-9f44df48b-dtxm8 echo-server 0.059067347073589654
-echo-server-9f44df48b-dtxm8 oauth-proxy 0.040102759442669535
-echo-server-9f44df48b-dtxm8 POD 0
+echo-server-2x-7b4dd959d4-d9zv6 null 0.02118329019217579
+echo-server-2x-7b4dd959d4-d9zv6 echo-server 0.00445373703416252
+echo-server-2x-7b4dd959d4-d9zv6 oauth-proxy 0.016869514342661127
+echo-server-2x-7b4dd959d4-d9zv6 POD 0
+echo-server-gateway-direct-f9f466667-lt25b null 2.4479660886084054e-07
+echo-server-gateway-direct-f9f466667-lt25b echo-server 2.4740833223957644e-07
+echo-server-gateway-direct-f9f466667-lt25b POD 0
+echo-server-b4c875645-5qqnd null 0.00003290049154618261
+echo-server-b4c875645-5qqnd POD 0
+echo-server-b4c875645-5qqnd echo-server 0.0000044052685067839424
+echo-server-b4c875645-5qqnd kube-rbac-proxy 0.000028691126576595115
 ## echo-server Memory (bytes):
-echo-server-9f44df48b-dtxm8 null 70905856
-echo-server-9f44df48b-dtxm8 echo-server 38232064
-echo-server-9f44df48b-dtxm8 oauth-proxy 31965184
-echo-server-9f44df48b-dtxm8 POD 0
+echo-server-2x-7b4dd959d4-d9zv6 null 58040320
+echo-server-2x-7b4dd959d4-d9zv6 echo-server 10944512
+echo-server-2x-7b4dd959d4-d9zv6 oauth-proxy 46305280
+echo-server-2x-7b4dd959d4-d9zv6 POD 0
+echo-server-gateway-direct-f9f466667-lt25b null 3211264
+echo-server-gateway-direct-f9f466667-lt25b echo-server 2826240
+echo-server-gateway-direct-f9f466667-lt25b POD 0
+echo-server-b4c875645-5qqnd null 31154176
+echo-server-b4c875645-5qqnd POD 0
+echo-server-b4c875645-5qqnd echo-server 8912896
+echo-server-b4c875645-5qqnd kube-rbac-proxy 21417984
 
-=== ITERATION 5 - START - Thu Oct 23 07:27:42 AM CDT 2025 ===
+=== ITERATION 5 - START - Tue Nov 18 09:01:44 AM CST 2025 ===
 ## oauth-proxy CPU (rate over 5m):
-echo-server-9f44df48b-dtxm8 0.04935666321903706
+echo-server-2x-7b4dd959d4-d9zv6 0.03131238061017595
 ## oauth-proxy Memory (bytes):
-echo-server-9f44df48b-dtxm8 32468992
+echo-server-2x-7b4dd959d4-d9zv6 46465024
 ## echo-server CPU (rate over 5m):
-echo-server-9f44df48b-dtxm8 null 0.12170320928412667
-echo-server-9f44df48b-dtxm8 echo-server 0.07387320439855949
-echo-server-9f44df48b-dtxm8 oauth-proxy 0.04941226844904742
-echo-server-9f44df48b-dtxm8 POD 0
+echo-server-2x-7b4dd959d4-d9zv6 null 0.039610349967803105
+echo-server-2x-7b4dd959d4-d9zv6 echo-server 0.0082480011828814
+echo-server-2x-7b4dd959d4-d9zv6 oauth-proxy 0.03131238061017595
+echo-server-2x-7b4dd959d4-d9zv6 POD 0
+echo-server-gateway-direct-f9f466667-lt25b null 2.747222557993868e-07
+echo-server-gateway-direct-f9f466667-lt25b echo-server 2.7998202220699555e-07
+echo-server-gateway-direct-f9f466667-lt25b POD 0
+echo-server-b4c875645-5qqnd null 0.000030678461676164577
+echo-server-b4c875645-5qqnd POD 0
+echo-server-b4c875645-5qqnd echo-server 0.000003981075256226752
+echo-server-b4c875645-5qqnd kube-rbac-proxy 0.00002711368256928274
 ## echo-server Memory (bytes):
-echo-server-9f44df48b-dtxm8 null 70905856
-echo-server-9f44df48b-dtxm8 echo-server 38232064
-echo-server-9f44df48b-dtxm8 oauth-proxy 31965184
-echo-server-9f44df48b-dtxm8 POD 0
+echo-server-2x-7b4dd959d4-d9zv6 null 57999360
+echo-server-2x-7b4dd959d4-d9zv6 echo-server 10756096
+echo-server-2x-7b4dd959d4-d9zv6 oauth-proxy 46465024
+echo-server-2x-7b4dd959d4-d9zv6 POD 0
+echo-server-gateway-direct-f9f466667-lt25b null 3211264
+echo-server-gateway-direct-f9f466667-lt25b echo-server 2826240
+echo-server-gateway-direct-f9f466667-lt25b POD 0
+echo-server-b4c875645-5qqnd null 31088640
+echo-server-b4c875645-5qqnd POD 0
+echo-server-b4c875645-5qqnd echo-server 8912896
+echo-server-b4c875645-5qqnd kube-rbac-proxy 21417984
 
-=== ITERATION 5 - END - Thu Oct 23 07:27:54 AM CDT 2025 ===
+=== ITERATION 5 - END - Tue Nov 18 09:01:55 AM CST 2025 ===
 ## oauth-proxy CPU (rate over 5m):
-echo-server-9f44df48b-dtxm8 0.05135289097640918
+echo-server-2x-7b4dd959d4-d9zv6 0.03131238061017595
 ## oauth-proxy Memory (bytes):
-echo-server-9f44df48b-dtxm8 32468992
+echo-server-2x-7b4dd959d4-d9zv6 46465024
 ## echo-server CPU (rate over 5m):
-echo-server-9f44df48b-dtxm8 null 0.1266912763234607
-echo-server-9f44df48b-dtxm8 echo-server 0.07694085577973711
-echo-server-9f44df48b-dtxm8 oauth-proxy 0.051565952012866824
-echo-server-9f44df48b-dtxm8 POD 0
+echo-server-2x-7b4dd959d4-d9zv6 null 0.04543921680720309
+echo-server-2x-7b4dd959d4-d9zv6 echo-server 0.0082480011828814
+echo-server-2x-7b4dd959d4-d9zv6 oauth-proxy 0.03131238061017595
+echo-server-2x-7b4dd959d4-d9zv6 POD 0
+echo-server-gateway-direct-f9f466667-lt25b null 2.747222557993868e-07
+echo-server-gateway-direct-f9f466667-lt25b echo-server 2.799820222069956e-07
+echo-server-gateway-direct-f9f466667-lt25b POD 0
+echo-server-b4c875645-5qqnd null 0.00003067846167616458
+echo-server-b4c875645-5qqnd POD 0
+echo-server-b4c875645-5qqnd echo-server 0.000003981075256226752
+echo-server-b4c875645-5qqnd kube-rbac-proxy 0.000025069541871965887
 ## echo-server Memory (bytes):
-echo-server-9f44df48b-dtxm8 null 71409664
-echo-server-9f44df48b-dtxm8 echo-server 38227968
-echo-server-9f44df48b-dtxm8 oauth-proxy 32468992
-echo-server-9f44df48b-dtxm8 POD 0
+echo-server-2x-7b4dd959d4-d9zv6 null 57999360
+echo-server-2x-7b4dd959d4-d9zv6 echo-server 10756096
+echo-server-2x-7b4dd959d4-d9zv6 oauth-proxy 46465024
+echo-server-2x-7b4dd959d4-d9zv6 POD 0
+echo-server-gateway-direct-f9f466667-lt25b null 3211264
+echo-server-gateway-direct-f9f466667-lt25b echo-server 2826240
+echo-server-gateway-direct-f9f466667-lt25b POD 0
+echo-server-b4c875645-5qqnd null 31088640
+echo-server-b4c875645-5qqnd POD 0
+echo-server-b4c875645-5qqnd echo-server 8912896
+echo-server-b4c875645-5qqnd kube-rbac-proxy 21417984
 

@@ -1,53 +1,53 @@
 Route Benchmark Results - RHOAI 2.x with OAuth
-Generated: Thu Oct 23 07:26:08 AM CDT 2025
+Generated: Tue Nov 18 09:00:15 AM CST 2025
 Configuration: 10000 requests, 50 concurrency, 5 iterations
-Route URL: https://echo-server-opendatahub.apps.rosa.w7y7v5e1p9h9x1c.o65n.p3.openshiftapps.com
+Route URL: https://echo-server-2x-opendatahub.apps.rosa.f3d4c3l4i5u4x1v.fcu6.p3.openshiftapps.com
 
 ================================================================================
 
 === ITERATION 1 ===
-Started: Thu Oct 23 07:26:11 AM CDT 2025
+Started: Tue Nov 18 09:00:17 AM CST 2025
 
 
 Summary:
-  Total:	10.9324 secs
-  Slowest:	0.3114 secs
-  Fastest:	0.0411 secs
-  Average:	0.0536 secs
-  Requests/sec:	914.7110
+  Total:	9.5767 secs
+  Slowest:	0.1655 secs
+  Fastest:	0.0399 secs
+  Average:	0.0471 secs
+  Requests/sec:	1044.2032
   
-  Total data:	6244813 bytes
-  Size/request:	624 bytes
+  Total data:	140000 bytes
+  Size/request:	14 bytes
 
 Response time histogram:
-  0.041 [1]	|
-  0.068 [9526]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  0.095 [413]	|■■
-  0.122 [9]	|
-  0.149 [0]	|
-  0.176 [18]	|
-  0.203 [32]	|
-  0.230 [0]	|
-  0.257 [0]	|
-  0.284 [0]	|
-  0.311 [1]	|
+  0.040 [1]	|
+  0.052 [9221]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.065 [679]	|■■■
+  0.078 [49]	|
+  0.090 [0]	|
+  0.103 [0]	|
+  0.115 [0]	|
+  0.128 [0]	|
+  0.140 [6]	|
+  0.153 [13]	|
+  0.166 [31]	|
 
 
 Latency distribution:
-  10% in 0.0465 secs
-  25% in 0.0481 secs
-  50% in 0.0508 secs
-  75% in 0.0559 secs
-  90% in 0.0623 secs
-  95% in 0.0678 secs
-  99% in 0.0874 secs
+  10% in 0.0431 secs
+  25% in 0.0440 secs
+  50% in 0.0455 secs
+  75% in 0.0480 secs
+  90% in 0.0512 secs
+  95% in 0.0553 secs
+  99% in 0.0644 secs
 
 Details (average, fastest, slowest):
-  DNS+dialup:	0.0005 secs, 0.0411 secs, 0.3114 secs
-  DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0018 secs
-  req write:	0.0000 secs, 0.0000 secs, 0.0023 secs
-  resp wait:	0.0529 secs, 0.0410 secs, 0.3111 secs
-  resp read:	0.0001 secs, 0.0000 secs, 0.0040 secs
+  DNS+dialup:	0.0005 secs, 0.0399 secs, 0.1655 secs
+  DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0022 secs
+  req write:	0.0000 secs, 0.0000 secs, 0.0041 secs
+  resp wait:	0.0465 secs, 0.0398 secs, 0.0744 secs
+  resp read:	0.0001 secs, 0.0000 secs, 0.0028 secs
 
 Status code distribution:
   [200]	10000 responses
@@ -55,53 +55,53 @@ Status code distribution:
 
 
 
-Completed: Thu Oct 23 07:26:24 AM CDT 2025
+Completed: Tue Nov 18 09:00:29 AM CST 2025
 
 --------------------------------------------------------------------------------
 
 === ITERATION 2 ===
-Started: Thu Oct 23 07:26:34 AM CDT 2025
+Started: Tue Nov 18 09:00:39 AM CST 2025
 
 
 Summary:
-  Total:	10.5572 secs
-  Slowest:	0.2244 secs
-  Fastest:	0.0412 secs
-  Average:	0.0520 secs
-  Requests/sec:	947.2240
+  Total:	9.6045 secs
+  Slowest:	0.1715 secs
+  Fastest:	0.0403 secs
+  Average:	0.0474 secs
+  Requests/sec:	1041.1782
   
-  Total data:	6245601 bytes
-  Size/request:	624 bytes
+  Total data:	140000 bytes
+  Size/request:	14 bytes
 
 Response time histogram:
-  0.041 [1]	|
-  0.059 [8960]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  0.078 [938]	|■■■■
-  0.096 [44]	|
-  0.114 [7]	|
-  0.133 [0]	|
-  0.151 [0]	|
-  0.169 [0]	|
-  0.188 [2]	|
-  0.206 [19]	|
-  0.224 [29]	|
+  0.040 [1]	|
+  0.053 [9294]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.067 [631]	|■■■
+  0.080 [24]	|
+  0.093 [0]	|
+  0.106 [0]	|
+  0.119 [0]	|
+  0.132 [0]	|
+  0.145 [6]	|
+  0.158 [16]	|
+  0.171 [28]	|
 
 
 Latency distribution:
-  10% in 0.0460 secs
-  25% in 0.0475 secs
-  50% in 0.0494 secs
-  75% in 0.0531 secs
-  90% in 0.0599 secs
-  95% in 0.0655 secs
-  99% in 0.0780 secs
+  10% in 0.0434 secs
+  25% in 0.0442 secs
+  50% in 0.0460 secs
+  75% in 0.0482 secs
+  90% in 0.0518 secs
+  95% in 0.0550 secs
+  99% in 0.0649 secs
 
 Details (average, fastest, slowest):
-  DNS+dialup:	0.0007 secs, 0.0412 secs, 0.2244 secs
-  DNS-lookup:	0.0002 secs, 0.0000 secs, 0.0496 secs
-  req write:	0.0000 secs, 0.0000 secs, 0.0018 secs
-  resp wait:	0.0511 secs, 0.0411 secs, 0.1053 secs
-  resp read:	0.0001 secs, 0.0000 secs, 0.0037 secs
+  DNS+dialup:	0.0005 secs, 0.0403 secs, 0.1715 secs
+  DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0022 secs
+  req write:	0.0000 secs, 0.0000 secs, 0.0046 secs
+  resp wait:	0.0468 secs, 0.0403 secs, 0.0750 secs
+  resp read:	0.0001 secs, 0.0000 secs, 0.0028 secs
 
 Status code distribution:
   [200]	10000 responses
@@ -109,160 +109,52 @@ Status code distribution:
 
 
 
-Completed: Thu Oct 23 07:26:47 AM CDT 2025
+Completed: Tue Nov 18 09:00:50 AM CST 2025
 
 --------------------------------------------------------------------------------
 
 === ITERATION 3 ===
-Started: Thu Oct 23 07:26:57 AM CDT 2025
+Started: Tue Nov 18 09:01:00 AM CST 2025
 
 
 Summary:
-  Total:	10.5169 secs
-  Slowest:	0.1825 secs
-  Fastest:	0.0411 secs
-  Average:	0.0519 secs
-  Requests/sec:	950.8498
+  Total:	9.6432 secs
+  Slowest:	0.1696 secs
+  Fastest:	0.0406 secs
+  Average:	0.0475 secs
+  Requests/sec:	1036.9974
   
-  Total data:	6245364 bytes
-  Size/request:	624 bytes
+  Total data:	140000 bytes
+  Size/request:	14 bytes
 
 Response time histogram:
   0.041 [1]	|
-  0.055 [8195]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  0.069 [1568]	|■■■■■■■■
-  0.084 [164]	|■
-  0.098 [22]	|
-  0.112 [0]	|
-  0.126 [0]	|
-  0.140 [0]	|
-  0.154 [9]	|
-  0.168 [15]	|
-  0.183 [26]	|
+  0.054 [9311]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.066 [568]	|■■
+  0.079 [68]	|
+  0.092 [2]	|
+  0.105 [0]	|
+  0.118 [0]	|
+  0.131 [0]	|
+  0.144 [1]	|
+  0.157 [1]	|
+  0.170 [48]	|
 
 
 Latency distribution:
-  10% in 0.0461 secs
-  25% in 0.0476 secs
-  50% in 0.0495 secs
-  75% in 0.0534 secs
-  90% in 0.0591 secs
-  95% in 0.0641 secs
-  99% in 0.0798 secs
+  10% in 0.0433 secs
+  25% in 0.0442 secs
+  50% in 0.0460 secs
+  75% in 0.0482 secs
+  90% in 0.0516 secs
+  95% in 0.0554 secs
+  99% in 0.0693 secs
 
 Details (average, fastest, slowest):
-  DNS+dialup:	0.0005 secs, 0.0411 secs, 0.1825 secs
-  DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0019 secs
-  req write:	0.0000 secs, 0.0000 secs, 0.0025 secs
-  resp wait:	0.0512 secs, 0.0410 secs, 0.0915 secs
-  resp read:	0.0001 secs, 0.0000 secs, 0.0034 secs
-
-Status code distribution:
-  [200]	10000 responses
-
-
-
-
-Completed: Thu Oct 23 07:27:09 AM CDT 2025
-
---------------------------------------------------------------------------------
-
-=== ITERATION 4 ===
-Started: Thu Oct 23 07:27:19 AM CDT 2025
-
-
-Summary:
-  Total:	11.2123 secs
-  Slowest:	0.1837 secs
-  Fastest:	0.0412 secs
-  Average:	0.0548 secs
-  Requests/sec:	891.8761
-  
-  Total data:	6243645 bytes
-  Size/request:	624 bytes
-
-Response time histogram:
-  0.041 [1]	|
-  0.055 [6958]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  0.070 [2337]	|■■■■■■■■■■■■■
-  0.084 [490]	|■■■
-  0.098 [133]	|■
-  0.112 [22]	|
-  0.127 [9]	|
-  0.141 [0]	|
-  0.155 [7]	|
-  0.169 [11]	|
-  0.184 [32]	|
-
-
-Latency distribution:
-  10% in 0.0465 secs
-  25% in 0.0484 secs
-  50% in 0.0516 secs
-  75% in 0.0570 secs
-  90% in 0.0662 secs
-  95% in 0.0735 secs
-  99% in 0.0949 secs
-
-Details (average, fastest, slowest):
-  DNS+dialup:	0.0005 secs, 0.0412 secs, 0.1837 secs
-  DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0018 secs
-  req write:	0.0000 secs, 0.0000 secs, 0.0052 secs
-  resp wait:	0.0541 secs, 0.0412 secs, 0.1172 secs
-  resp read:	0.0001 secs, 0.0000 secs, 0.0023 secs
-
-Status code distribution:
-  [200]	10000 responses
-
-
-
-
-Completed: Thu Oct 23 07:27:32 AM CDT 2025
-
---------------------------------------------------------------------------------
-
-=== ITERATION 5 ===
-Started: Thu Oct 23 07:27:42 AM CDT 2025
-
-
-Summary:
-  Total:	10.5183 secs
-  Slowest:	0.2557 secs
-  Fastest:	0.0419 secs
-  Average:	0.0519 secs
-  Requests/sec:	950.7229
-  
-  Total data:	6245402 bytes
-  Size/request:	624 bytes
-
-Response time histogram:
-  0.042 [1]	|
-  0.063 [9563]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  0.085 [375]	|■■
-  0.106 [11]	|
-  0.127 [0]	|
-  0.149 [0]	|
-  0.170 [0]	|
-  0.192 [0]	|
-  0.213 [3]	|
-  0.234 [22]	|
-  0.256 [25]	|
-
-
-Latency distribution:
-  10% in 0.0461 secs
-  25% in 0.0476 secs
-  50% in 0.0495 secs
-  75% in 0.0529 secs
-  90% in 0.0580 secs
-  95% in 0.0623 secs
-  99% in 0.0760 secs
-
-Details (average, fastest, slowest):
-  DNS+dialup:	0.0009 secs, 0.0419 secs, 0.2557 secs
-  DNS-lookup:	0.0004 secs, 0.0000 secs, 0.0748 secs
-  req write:	0.0000 secs, 0.0000 secs, 0.0021 secs
-  resp wait:	0.0509 secs, 0.0412 secs, 0.0968 secs
+  DNS+dialup:	0.0006 secs, 0.0406 secs, 0.1696 secs
+  DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0020 secs
+  req write:	0.0000 secs, 0.0000 secs, 0.0020 secs
+  resp wait:	0.0468 secs, 0.0405 secs, 0.0825 secs
   resp read:	0.0001 secs, 0.0000 secs, 0.0032 secs
 
 Status code distribution:
@@ -271,7 +163,115 @@ Status code distribution:
 
 
 
-Completed: Thu Oct 23 07:27:55 AM CDT 2025
+Completed: Tue Nov 18 09:01:12 AM CST 2025
+
+--------------------------------------------------------------------------------
+
+=== ITERATION 4 ===
+Started: Tue Nov 18 09:01:22 AM CST 2025
+
+
+Summary:
+  Total:	9.8230 secs
+  Slowest:	0.2408 secs
+  Fastest:	0.0397 secs
+  Average:	0.0483 secs
+  Requests/sec:	1018.0166
+  
+  Total data:	140000 bytes
+  Size/request:	14 bytes
+
+Response time histogram:
+  0.040 [1]	|
+  0.060 [9716]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.080 [230]	|■
+  0.100 [3]	|
+  0.120 [0]	|
+  0.140 [0]	|
+  0.160 [0]	|
+  0.180 [0]	|
+  0.201 [4]	|
+  0.221 [0]	|
+  0.241 [46]	|
+
+
+Latency distribution:
+  10% in 0.0435 secs
+  25% in 0.0444 secs
+  50% in 0.0466 secs
+  75% in 0.0488 secs
+  90% in 0.0531 secs
+  95% in 0.0559 secs
+  99% in 0.0654 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:	0.0008 secs, 0.0397 secs, 0.2408 secs
+  DNS-lookup:	0.0003 secs, 0.0000 secs, 0.0598 secs
+  req write:	0.0000 secs, 0.0000 secs, 0.0023 secs
+  resp wait:	0.0473 secs, 0.0395 secs, 0.0848 secs
+  resp read:	0.0001 secs, 0.0000 secs, 0.0031 secs
+
+Status code distribution:
+  [200]	10000 responses
+
+
+
+
+Completed: Tue Nov 18 09:01:34 AM CST 2025
+
+--------------------------------------------------------------------------------
+
+=== ITERATION 5 ===
+Started: Tue Nov 18 09:01:44 AM CST 2025
+
+
+Summary:
+  Total:	9.8140 secs
+  Slowest:	0.3026 secs
+  Fastest:	0.0400 secs
+  Average:	0.0475 secs
+  Requests/sec:	1018.9576
+  
+  Total data:	140000 bytes
+  Size/request:	14 bytes
+
+Response time histogram:
+  0.040 [1]	|
+  0.066 [9922]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.093 [26]	|
+  0.119 [0]	|
+  0.145 [9]	|
+  0.171 [9]	|
+  0.198 [32]	|
+  0.224 [0]	|
+  0.250 [0]	|
+  0.276 [0]	|
+  0.303 [1]	|
+
+
+Latency distribution:
+  10% in 0.0433 secs
+  25% in 0.0442 secs
+  50% in 0.0461 secs
+  75% in 0.0483 secs
+  90% in 0.0519 secs
+  95% in 0.0553 secs
+  99% in 0.0639 secs
+
+Details (average, fastest, slowest):
+  DNS+dialup:	0.0005 secs, 0.0400 secs, 0.3026 secs
+  DNS-lookup:	0.0000 secs, 0.0000 secs, 0.0020 secs
+  req write:	0.0000 secs, 0.0000 secs, 0.0023 secs
+  resp wait:	0.0468 secs, 0.0399 secs, 0.3025 secs
+  resp read:	0.0001 secs, 0.0000 secs, 0.0028 secs
+
+Status code distribution:
+  [200]	10000 responses
+
+
+
+
+Completed: Tue Nov 18 09:01:56 AM CST 2025
 
 --------------------------------------------------------------------------------
 

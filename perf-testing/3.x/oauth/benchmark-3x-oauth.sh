@@ -5,8 +5,20 @@
 
 set -e
 
+# Auto-detect Gateway URL if not provided
+if [ -z "$GATEWAY_URL" ]; then
+    echo "Auto-detecting Gateway URL..."
+    GATEWAY_HOSTNAME=$(oc get gateway -n openshift-ingress data-science-gateway -o jsonpath='{.spec.listeners[0].hostname}' 2>/dev/null)
+    if [ -n "$GATEWAY_HOSTNAME" ]; then
+        GATEWAY_URL="https://${GATEWAY_HOSTNAME}"
+        echo "✓ Detected Gateway URL: $GATEWAY_URL"
+    else
+        echo "Error: Could not auto-detect gateway. Please set GATEWAY_URL env var."
+        exit 1
+    fi
+fi
+
 # Configuration
-GATEWAY_URL="https://data-science-gateway.apps.rosa.b9q3t4p8k3y8k9a.vzrg.p3.openshiftapps.com"
 ENDPOINT="/echo"
 # TOKEN must be set via environment variable or obtained via 'oc login'
 # Example: export TOKEN=$(oc whoami -t)
@@ -50,10 +62,15 @@ if ! command -v oc &> /dev/null; then
     exit 1
 fi
 
-# Verify token is set
+# Get token from oc if not set
 if [ -z "$TOKEN" ]; then
-    echo -e "${YELLOW}Error: No auth token found. Set TOKEN env var or login with 'oc login'${NC}"
-    exit 1
+    echo "Getting auth token from oc..."
+    TOKEN=$(oc whoami -t 2>/dev/null)
+    if [ -z "$TOKEN" ]; then
+        echo -e "${YELLOW}Error: No auth token found. Set TOKEN env var or login with 'oc login'${NC}"
+        exit 1
+    fi
+    echo -e "${GREEN}✓ Got token from oc${NC}"
 fi
 
 # Test endpoint connectivity

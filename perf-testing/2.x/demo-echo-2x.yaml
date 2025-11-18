@@ -1,0 +1,111 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echo-server-2x
+  namespace: opendatahub
+  labels:
+    app: echo-server-2x
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: echo-server-2x
+  template:
+    metadata:
+      labels:
+        app: echo-server-2x
+    spec:
+      serviceAccount: echo-server-2x
+      containers:
+      - name: echo-server
+        image: hashicorp/http-echo:latest
+        args:
+          - "-text=echo response"
+          - "-listen=:8080"
+        ports:
+        - containerPort: 8080
+          name: http
+      - name: oauth-proxy
+        image: quay.io/openshift/origin-oauth-proxy:4.15
+        ports:
+        - containerPort: 8443
+          name: https
+        args:
+        - --https-address=:8443
+        - --provider=openshift
+        - --openshift-service-account=echo-server-2x
+        - --upstream=http://localhost:8080
+        - --tls-cert=/etc/tls/private/tls.crt
+        - --tls-key=/etc/tls/private/tls.key
+        - --cookie-secret=0123456789abcdef0123456789abcdef
+        - '--openshift-delegate-urls={"/": {"resource": "projects", "verb": "list"}}'
+        volumeMounts:
+        - mountPath: /etc/tls/private
+          name: echo-server-2x-tls
+          readOnly: true
+      volumes:
+      - name: echo-server-2x-tls
+        secret:
+          secretName: echo-server-2x-tls
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: echo-server-2x
+  namespace: opendatahub
+  labels:
+    app: echo-server-2x
+  annotations:
+    service.beta.openshift.io/serving-cert-secret-name: echo-server-2x-tls
+spec:
+  selector:
+    app: echo-server-2x
+  ports:
+  - name: https
+    port: 8443
+    targetPort: 8443
+    protocol: TCP
+  type: ClusterIP
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: echo-server-2x
+  namespace: opendatahub
+  labels:
+    app: echo-server-2x
+  annotations:
+    serviceaccounts.openshift.io/oauth-redirectreference.primary: '{"kind":"OAuthRedirectReference","apiVersion":"v1","reference":{"kind":"Route","name":"echo-server-2x"}}'
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: echo-server-2x-tokenreview
+  labels:
+    app: echo-server-2x
+subjects:
+- kind: ServiceAccount
+  name: echo-server-2x
+  namespace: opendatahub
+roleRef:
+  kind: ClusterRole
+  name: system:auth-delegator
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: echo-server-2x
+  namespace: opendatahub
+  labels:
+    app: echo-server-2x
+spec:
+  to:
+    kind: Service
+    name: echo-server-2x
+  port:
+    targetPort: https
+  tls:
+    termination: reencrypt
+    insecureEdgeTerminationPolicy: Redirect

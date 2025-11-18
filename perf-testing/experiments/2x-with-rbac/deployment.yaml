@@ -1,0 +1,4 @@
+# 2.x with RBAC - Route + oauth-proxy + kube-rbac-proxy
+# Tests if kube-rbac-proxy adds same overhead on Route-based ingress
+
+# TODO: Create deployment with oauth-proxy → kube-rbac-proxy → echo-server
