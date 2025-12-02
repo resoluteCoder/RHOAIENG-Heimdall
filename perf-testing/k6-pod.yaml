@@ -36,9 +36,10 @@ data:
         },
       },
       thresholds: {
-        http_req_duration: ['p(95)<500', 'p(99)<1000'], // 95% < 200ms, 99% < 1s
+        http_req_duration: ['p(95)<100', 'p(99)<1000'], // 95% < 100ms, 99% < 1s
         http_req_failed: ['rate<0.01'], // less than 1% errors
       },
+      insecureSkipTLSVerify: true, // Ignore self-signed SSL certificates
     };
 
     export default function () {
@@ -58,22 +59,6 @@ data:
       });
     }
 
-    export function handleSummary(data) {
-      const httpReqs = data.metrics.http_reqs;
-      const actualRPS = httpReqs ? (httpReqs.values.count / httpReqs.values.rate).toFixed(2) : 'N/A';
-      
-      console.log('\n=== Fixed RPS Load Test Summary ===');
-      console.log(`Target RPS: ${RPS}`);
-      console.log(`Actual RPS: ${actualRPS}`);
-      console.log(`Duration: ${DURATION}`);
-      console.log(`URL: ${URL}`);
-      console.log(`Pre-allocated VUs: ${PREALLOC_VUS}`);
-      console.log(`Max VUs: ${MAX_VUS}`);
-      
-      return {
-        'stdout': textSummary(data, { indent: ' ', enableColors: true }),
-      };
-    }
 ---
 apiVersion: v1
 kind: Pod
@@ -83,6 +68,31 @@ metadata:
   labels:
     app: k6-benchmark
 spec:
+  affinity:
+    podAntiAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+          - key: app
+            operator: In
+            values:
+            - echo-server
+        topologyKey: kubernetes.io/hostname
+      - labelSelector:
+          matchExpressions:
+          - key: app
+            operator: In
+            values:
+            - istio-ingressgateway
+            - data-science-gateway
+        topologyKey: kubernetes.io/hostname
+      - labelSelector:
+          matchExpressions:
+          - key: ingresscontroller.operator.openshift.io/deployment-ingresscontroller
+            operator: In
+            values:
+            - default
+        topologyKey: kubernetes.io/hostname
   containers:
   - name: k6
     image: grafana/k6:master
